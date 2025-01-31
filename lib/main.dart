@@ -81,11 +81,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                 child: ListTile(
                   title: Text(data.title),
-                  subtitle: const Text('วันที่บันทึกข้อมูล'),
+                  subtitle: Text('บันทึกวันที่  '
+                    '${data.dateTime.day}/${data.dateTime.month}/${data.dateTime.year} '
+                    '  เวลา '
+                    '${data.dateTime.hour}:${data.dateTime.minute}',
+                  ),
                   leading: CircleAvatar(
                     child: FittedBox(
-                      child:
-                          Text(data.amount.toString()),
+                      child: Text(data.amount.toString()),
                     ),
                   ),
                 ),
